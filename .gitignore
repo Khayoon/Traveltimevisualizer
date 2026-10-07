@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.cache/
+.data-cache/
+artifacts/
+*.tar.gz
+.sites-local/
+public/data/gta.json
+public/data/ontario.json

@@ -1,0 +1,22 @@
+{
+  "name": "ontario-drive-time-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "node scripts/prepare-data.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "data": "node scripts/fetch-data.mjs"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "5.2.6",
+    "@fontsource/ibm-plex-mono": "5.2.6",
+    "leaflet": "1.9.4"
+  },
+  "devDependencies": {
+    "vite": "^8.3.3"
+  }
+}

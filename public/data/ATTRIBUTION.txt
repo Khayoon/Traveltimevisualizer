@@ -17,4 +17,3 @@ Ontario boundary and lakes: Natural Earth, 1:50 million, public domain.
 Source: https://www.naturalearthdata.com/
 Distribution: https://github.com/nvkelso/natural-earth-vector
 This small-scale cartography is a visual context layer, not routing geometry.
-

@@ -1,0 +1,112 @@
+{
+  "id": "ontario",
+  "title": "Ontario — major-road network",
+  "scope": "Ontario OSM motorway, trunk, primary and secondary roads and their links. Local, residential, tertiary, service and other minor roads are excluded; this is a major-road subset, not all drivable roads in Ontario.",
+  "bbox": [
+    -95.17,
+    41.67,
+    -74.32,
+    56.87
+  ],
+  "source": "OpenStreetMap",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "license": "ODbL 1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "retrievedAt": "2026-10-06T22:02:02.093Z",
+  "osmTimestamp": "2026-10-06T21:56:49Z",
+  "rawSha256": "3cc088bf50e98e9393dd18a3dc9aeaa12b44c85e3e65f6738cd40b6a6155ff35",
+  "query": "[out:json][timeout:180][maxsize:268435456];area[\"ISO3166-2\"=\"CA-ON\"][\"boundary\"=\"administrative\"]->.ontario;way(area.ontario)[\"highway\"~\"^(motorway|motorway_link|trunk|trunk_link|primary|primary_link|secondary|secondary_link)$\"];out body geom;",
+  "totalKm": 52813.741,
+  "nodeCount": 119327,
+  "edgeCount": 136659,
+  "osmWayCount": 130672,
+  "downloadedWayCount": 130811,
+  "weakComponentCount": 27,
+  "largestWeakComponentNodes": 119149,
+  "taggedSpeedWays": 94645,
+  "defaultSpeedWays": 36027,
+  "classStats": {
+    "motorway": {
+      "edges": 8535,
+      "lengthKm": 4997.424
+    },
+    "secondary": {
+      "edges": 85288,
+      "lengthKm": 32266.788
+    },
+    "motorway_link": {
+      "edges": 7275,
+      "lengthKm": 1896.236
+    },
+    "primary_link": {
+      "edges": 1403,
+      "lengthKm": 127.656
+    },
+    "primary": {
+      "edges": 26089,
+      "lengthKm": 8563.984
+    },
+    "trunk": {
+      "edges": 4902,
+      "lengthKm": 4695.025
+    },
+    "secondary_link": {
+      "edges": 2381,
+      "lengthKm": 156.942
+    },
+    "trunk_link": {
+      "edges": 786,
+      "lengthKm": 109.686
+    }
+  },
+  "geometrySimplification": {
+    "method": "Douglas-Peucker",
+    "toleranceMetres": 5,
+    "originalGeometryPoints": 778189,
+    "simplifiedGeometryPoints": 383011,
+    "note": "Length and travel time are calculated from original geometry; only displayed and snapped line geometry is simplified. Endpoints and graph intersections are preserved."
+  },
+  "defaultSpeedKph": {
+    "motorway": 100,
+    "motorway_link": 60,
+    "trunk": 90,
+    "trunk_link": 50,
+    "primary": 80,
+    "primary_link": 50,
+    "secondary": 70,
+    "secondary_link": 40,
+    "tertiary": 60,
+    "tertiary_link": 40,
+    "residential": 40,
+    "unclassified": 50,
+    "living_street": 20,
+    "service": 20
+  },
+  "edgeSchema": [
+    "fromNode",
+    "toNode",
+    "lengthKm",
+    "freeFlowMinutes",
+    "classIndex",
+    "nameIndex",
+    "oneway",
+    "geometryIndex"
+  ],
+  "onewayValues": {
+    "0": "both directions",
+    "1": "fromNode to toNode",
+    "-1": "toNode to fromNode"
+  },
+  "lengthDefinition": "Sum of imported physical OSM way segments, counted once each. Separate carriageways are separate OSM ways and counted separately.",
+  "boundarySelection": "Ways selected by the OpenStreetMap Ontario administrative area. Whole selected ways retain their endpoint geometry, so a boundary-crossing way can extend slightly outside the selection boundary.",
+  "speedModel": "OSM numeric maxspeed (mph converted), otherwise the documented per-class default. No traffic or intersection delays. Posted limits capped at 130 km/h.",
+  "limitations": [
+    "Reachability applies only to the imported road network, not all real-world roads.",
+    "Turn restrictions, timed/conditional restrictions, closures, traffic and intersection delays are not modelled.",
+    "Directional maxspeed tags are not modelled; a single maxspeed/default applies to each way.",
+    "Access tags use motorcar, then motor_vehicle, then vehicle, then access. Restricted/private/destination-only ways are excluded.",
+    "One-way tags, motorway defaults and roundabouts are respected. One-way conditional and reversible lanes are not modelled.",
+    "Nodes at grade-separated crossings are not joined unless OpenStreetMap shares the node."
+  ]
+}

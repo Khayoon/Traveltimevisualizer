@@ -1,0 +1,15 @@
+{
+  "name": "Natural Earth 1:50m Admin 1 states and provinces",
+  "website": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-1-states-provinces/",
+  "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_1_states_provinces.geojson",
+  "license": "Public domain",
+  "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "retrievedAt": "2026-10-06T21:56:19.178Z",
+  "output": "ontario-boundary.geojson",
+  "selection": "Feature properties.name === Ontario; iso_3166_2 === CA-ON",
+  "geometryType": "MultiPolygon",
+  "bbox": [-95.160363, 41.67487, -74.340446, 56.851307],
+  "processing": "Selected the Ontario feature from the original GeoJSON and preserved its geometry without modification.",
+  "limitations": "Generalized 1:50 million cartographic context. Not a survey boundary or a routing clipping mask.",
+  "reproductionScript": "scripts/fetch-context.mjs"
+}
